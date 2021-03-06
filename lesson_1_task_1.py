@@ -5,7 +5,7 @@
 * до суток: <h> час <m> мин <s> сек;
 * *до месяца, до года, больше года: по аналогии.
 
-!!! делал по задания с сайта, в методичке чуть изменены условия
+!!! делал по заданию с сайта, в методичке чуть изменены условия
 до минуты: <s> сек;
 до часа: <m> мин <s> сек;
 до суток: <h> час <m> мин <s> сек;
@@ -56,19 +56,19 @@ duration_years_months_rest = int((duration_seconds % year) / month)
 # что будет сложнее читаться
 if duration < minute:
       print(f'{duration_seconds} {sec_text}')
-elif duration >= minute and duration < hour:
+elif minute <= duration < hour:
       print(f'{duration_minutes} {min_text}',
             f'{duration_minutes_seconds_rest} {sec_text}')
-elif duration >= hour and duration < day:
+elif hour <= duration < day:
       print(f'{duration_hours} {hour_text}',
             f'{duration_hours_minutes_rest} {min_text}',
             f'{duration_minutes_seconds_rest} {sec_text}')
-elif duration >= day and duration < month:
+elif day <= duration < month:
       print(f'{duration_days} {day_text}',
             f'{duration_days_hours_rest} {hour_text}',
             f'{duration_hours_minutes_rest} {min_text}',
             f'{duration_minutes_seconds_rest} {sec_text}')
-elif duration >= month and duration < year:
+elif month <= duration < year:
       print(f'{duration_months} {month_text}',
             f'{duration_months_days_rest} {day_text}',
             f'{duration_days_hours_rest} {hour_text}',
